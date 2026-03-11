@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROMEO LIVE TV</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+/* الخلفية المتحركة */
+
+body{
+height:100vh;
+color:white;
+text-align:center;
+background:linear-gradient(45deg,#02122e,#052a6b,#031a45,#041f57);
+background-size:400% 400%;
+animation:bgMove 15s ease infinite;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* العنوان */
+
+header{
+padding:20px;
+font-size:30px;
+font-weight:bold;
+letter-spacing:3px;
+
+text-shadow:
+0 0 5px #2a7fff,
+0 0 15px #2a7fff,
+0 0 30px #1e5fff,
+0 0 60px #1e5fff;
+
+}
+
+/* الحاوية */
+
+.container{
+width:92%;
+max-width:900px;
+margin:auto;
+margin-top:40px;
+}
+
+/* مشغل الفيديو */
+
+.player{
+background:rgba(0,0,0,0.4);
+padding:10px;
+border-radius:15px;
+backdrop-filter:blur(10px);
+box-shadow:0 0 30px rgba(0,0,0,0.7);
+}
+
+video{
+width:100%;
+border-radius:10px;
+}
+
+/* العنوان الفرعي */
+
+.title{
+font-size:22px;
+margin-top:20px;
+}
+
+/* الأزرار */
+
+.buttons{
+margin-top:25px;
+}
+
+button{
+
+background:linear-gradient(45deg,#1f6bff,#3b8bff);
+border:none;
+padding:12px 22px;
+margin:6px;
+color:white;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+box-shadow:0 0 10px rgba(0,0,0,0.4);
+
+}
+
+button:hover{
+
+transform:scale(1.08);
+box-shadow:
+0 0 10px #2a7fff,
+0 0 20px #2a7fff,
+0 0 30px #2a7fff;
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+𝑅𝑂𝑀𝐸𝑂 𝐿𝐼𝑉𝐸 𝑇𝑉
+</header>
+
+<div class="container">
+
+<div class="player">
+
+<video controls>
+<source src="video.mp4" type="video/mp4">
+</video>
+
+</div>
+
+<div class="title">
+مشاهدة البث
+</div>
+
+<div class="buttons">
+
+<button onclick="downloadVideo()">تحميل الفيديو</button>
+
+<button onclick="alert('سيتم إضافة سيرفرات قريباً')">
+سيرفر آخر
+</button>
+
+<button onclick="goToSite()">
+رجوع الي الموقع
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function downloadVideo(){
+window.open("video.mp4");
+}
+
+function goToSite(){
+window.open("https://romeo-live-online.lovable.app/dashboard","_blank");
+}
+
+</script>
+
+</body>
+</html>
